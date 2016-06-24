@@ -1,0 +1,82 @@
+---
+title       : MyShinyApp Pitch
+subtitle    : DDP Project on Coursera
+author      : Stephen Sani
+job         : Presenter
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+## MyShinyApp
+The data used by this app is the built-in mtcars data in R
+
+The codes for the app are in two files: ui.R and server.R
+
+The App provides: 
+* summaries for two selected variables of the data 
+* a histogram for each of the two selected variables 
+* a scatter plot for both variables
+
+
+
+
+--- .class #id 
+## What the server does
+
+The server loads the mtcars data
+
+```r
+data("mtcars")
+```
+
+the fields for the data are
+
+
+```r
+colnames(mtcars)
+```
+
+```
+##  [1] "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"   "am"   "gear"
+## [11] "carb"
+```
+
+The server provides the summaries for the selected fields along with plots of the individual fields and their interaction.
+
+---
+## What the User interface does
+
+The user interface allows the user to select two fields on the mtcars data.
+The interface provides for two numeric intput fields that allows for numeric input from 0.
+Numeric inputs from 1 t0 11 corresponds to field values.
+
+```r
+data.frame(numericInput = c(1:11), fieldName = colnames(mtcars))
+```
+
+```
+##    numericInput fieldName
+## 1             1       mpg
+## 2             2       cyl
+## 3             3      disp
+## 4             4        hp
+## 5             5      drat
+## 6             6        wt
+## 7             7      qsec
+## 8             8        vs
+## 9             9        am
+## 10           10      gear
+## 11           11      carb
+```
+
+---
+## find MyShinyApp @
+
+
+https://sani3.shinyapps.io/MyShinyApp
+
+
+

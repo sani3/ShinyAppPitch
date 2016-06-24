@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyShinyApp Pitch</title>
+  <meta charset="utf-8">
+  <meta name="description" content="MyShinyApp Pitch">
+  <meta name="author" content="Stephen Sani">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>MyShinyApp Pitch</h1>
+    <h2>DDP Project on Coursera</h2>
+    <p>Stephen Sani<br/>Presenter</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>MyShinyApp</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data used by this app is the built-in mtcars data in R</p>
+
+<p>The codes for the app are in two files: ui.R and server.R</p>
+
+<p>The App provides: </p>
+
+<ul>
+<li>summaries for two selected variables of the data </li>
+<li>a histogram for each of the two selected variables </li>
+<li>a scatter plot for both variables</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What the server does</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The server loads the mtcars data</p>
+
+<pre><code class="r">data(&quot;mtcars&quot;)
+</code></pre>
+
+<p>the fields for the data are</p>
+
+<pre><code class="r">colnames(mtcars)
+</code></pre>
+
+<pre><code>##  [1] &quot;mpg&quot;  &quot;cyl&quot;  &quot;disp&quot; &quot;hp&quot;   &quot;drat&quot; &quot;wt&quot;   &quot;qsec&quot; &quot;vs&quot;   &quot;am&quot;   &quot;gear&quot;
+## [11] &quot;carb&quot;
+</code></pre>
+
+<p>The server provides the summaries for the selected fields along with plots of the individual fields and their interaction.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>What the User interface does</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The user interface allows the user to select two fields on the mtcars data.
+The interface provides for two numeric intput fields that allows for numeric input from 0.
+Numeric inputs from 1 t0 11 corresponds to field values.</p>
+
+<pre><code class="r">data.frame(numericInput = c(1:11), fieldName = colnames(mtcars))
+</code></pre>
+
+<pre><code>##    numericInput fieldName
+## 1             1       mpg
+## 2             2       cyl
+## 3             3      disp
+## 4             4        hp
+## 5             5      drat
+## 6             6        wt
+## 7             7      qsec
+## 8             8        vs
+## 9             9        am
+## 10           10      gear
+## 11           11      carb
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>find MyShinyApp @</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://sani3.shinyapps.io/MyShinyApp">https://sani3.shinyapps.io/MyShinyApp</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='MyShinyApp'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What the server does'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What the User interface does'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='find MyShinyApp @'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
